@@ -15,6 +15,6 @@ PreparedStatement pst;
  pst.setString(2,note);
  pst.executeUpdate();
  
-out.println("record Added");
+response.sendRedirect("score.jsp");
 
  %>

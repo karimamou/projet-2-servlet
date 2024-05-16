@@ -16,6 +16,6 @@ PreparedStatement pst;
  pst.setString(3,courseid);
  pst.executeUpdate();
  
-out.println("record updated");
+response.sendRedirect("score.jsp");
 
  %>

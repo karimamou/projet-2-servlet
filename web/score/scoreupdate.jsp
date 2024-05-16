@@ -14,6 +14,64 @@
         <link href="../bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
        
         <title>JSP Page</title>
+        
+        <style>
+            
+            body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.col-sm-4 {
+    width: 50%;
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-info {
+    background-color: #ffc107;
+    color: #212529;
+    margin-left: 25%;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+    margin-left: 25%;
+}
+
+        </style>
+        
     </head>
     <body>
         <h1>course</h1>
