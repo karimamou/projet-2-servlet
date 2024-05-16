@@ -15,6 +15,6 @@ PreparedStatement pst;
  pst.setString(2,duration);
  pst.executeUpdate();
  
-out.println("record Added");
+response.sendRedirect("course.jsp");
 
  %>

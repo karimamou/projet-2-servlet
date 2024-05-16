@@ -9,11 +9,11 @@ PreparedStatement pst;
 
  Class.forName("com.mysql.jdbc.Driver");
  con = DriverManager.getConnection("jdbc:mysql://localhost/jspstudm","root","");
- pst = con.prepareStatement("delete from course where id = ?");
+ pst = con.prepareStatement("delete from score where id = ?");
  
  pst.setString(1,courseid);
  pst.executeUpdate();
  
-response.sendRedirect("course.jsp");
+out.println("record deleted ");
 
  %>

@@ -10,22 +10,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
-        
-        
-        
- 
-    <script>
-        // Fonction pour afficher la barre de succès et rediriger vers index.jsp
-        function showSuccessAndRedirect() {
-            alert("Mise à jour réussie !");
-            window.location.replace("course.jsp");
-        }
-    </script>
-
     </head>
     <body>
-        <h1>course</h1>
+        <h1>Score</h1>
         <div class="row">
             <div class="col-sm-4">
                 <form method="POST" align="left" action="add.jsp">
@@ -35,8 +25,8 @@
                         
                     </div>
                      <div>  
-                        <label class="form-label"> Duration </label> 
-                        <input type="text" id="duration" name="duration" placeholder="Duration" class="form-control" required> 
+                        <label class="form-label"> Note</label> 
+                        <input type="text" id="note" name="note" placeholder="note" class="form-control" required> 
                     </div>
                     
                     <div>  
@@ -54,8 +44,8 @@
                     
                         <thead> 
                             <tr>
-                                <th>Course Name</th>
-                                <th>Duration</th>
+                                <th>Course </th>
+                                <th>Note</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -69,7 +59,7 @@
 
                             Class.forName("com.mysql.jdbc.Driver");
                             con = DriverManager.getConnection("jdbc:mysql://localhost/jspstudm","root","");
-                            String query = "select * from course";
+                            String query = "select * from score";
                             Statement st = con.createStatement();
                             rs = st.executeQuery(query);
                             while(rs.next()){
@@ -84,10 +74,10 @@
                             
                             
                             <tr>
-                                <td><%=rs.getString("coursename") %></td>
-                                <td><%=rs.getString("duration") %></td>
-                                <td><a href="courseupdate.jsp?id=<%=id %>"> Edit</a></td>
-                                <td><a href="coursedelete.jsp?id=<%=id %>"> Delete</a></td>
+                                <td><%=rs.getString("course") %></td>
+                                <td><%=rs.getString("note") %></td>
+                                <td><a href="scoreupdate.jsp?id=<%=id %>"> Edit</a></td>
+                                <td><a href="scoredelete.jsp?id=<%=id %>"> Delete</a></td>
                                 
                             </tr>
                             

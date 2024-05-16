@@ -15,7 +15,7 @@
 <a class="nav-link" href="student/student.jsp" style="color: white;">Student</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#"style="color: white;">Score</a>
+<a class="nav-link" href="score/score.jsp"style="color: white;">Score</a>
 </li>
 </ul>
 </div>

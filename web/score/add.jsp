@@ -1,19 +1,20 @@
 <%@page import="java.sql.*" %> 
 <% Class.forName("com.mysql.jdbc.Driver"); %>
 <% 
-String courseid = request.getParameter("id");
 
+String course = request.getParameter("name");
+String note= request.getParameter("note");
 
 Connection con;
 PreparedStatement pst;
 
  Class.forName("com.mysql.jdbc.Driver");
  con = DriverManager.getConnection("jdbc:mysql://localhost/jspstudm","root","");
- pst = con.prepareStatement("delete from course where id = ?");
- 
- pst.setString(1,courseid);
+ pst = con.prepareStatement("insert into score(course,note)values(?,?)");
+ pst.setString(1,course);
+ pst.setString(2,note);
  pst.executeUpdate();
  
-response.sendRedirect("course.jsp");
+out.println("record Added");
 
  %>
