@@ -14,6 +14,5 @@ PreparedStatement pst;
  pst.setString(1,courseid);
  pst.executeUpdate();
  
-out.println("record deleted ");
-
+response.sendRedirect("student.jsp");
  %>

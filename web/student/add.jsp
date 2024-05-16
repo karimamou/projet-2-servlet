@@ -19,6 +19,6 @@ PreparedStatement pst;
  pst.setString(4,phone);
  pst.executeUpdate();
  
-out.println("student Added");
+response.sendRedirect("student.jsp");
 
  %>

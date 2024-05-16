@@ -20,6 +20,6 @@ PreparedStatement pst;
  pst.setInt(5,courseid);
  pst.executeUpdate();
  
-out.println("student updated");
+response.sendRedirect("student.jsp");
 
  %>
